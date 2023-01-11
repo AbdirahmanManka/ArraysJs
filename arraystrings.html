@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        function splitString(str, num) {
+    let result = [];
+    let words = str.split(" ");
+    for (let i = 0; i < words.length; i++) {
+        if (words[i].length > num) {
+            let chunks = words[i].match(new RegExp('.{1,' + num + '}', 'g'));
+            result.push(...chunks);
+        } else {
+            result.push(words[i]);
+        }
+    }
+    return result;
+}
+
+console.log(splitString("Junior Developer at smart app",3)) 
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function sortNumbers(a, b, c) {
+  let arr = [a, b, c];
+  if (a > b && a > c) {
+    if (b > c) {
+      console.log(c, b, a);
+    } else {
+      console.log(b, c, a);
+    }
+  } else if (b > a && b > c) {
+    if (a > c) {
+      console.log(c, a, b);
+    } else {
+      console.log(a, c, b);
+    }
+  } else {
+    if (a > b) {
+      console.log(b, a, c);
+    } else {
+      console.log(a, b, c);
+    }
+  }
+}
+console.log(sortNumbers(900,789,1000))
+
+    </script>
+    
+</body>
+</html>
